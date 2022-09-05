@@ -12,3 +12,22 @@
 
 // БЭМ-блоки
 @import "../blocks/modules";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Roboto Slab', serif;
+}
+
+.page-main{
+  background-image: url("../img/bg-main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+//.header{
+//
+//}
