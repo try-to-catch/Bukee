@@ -13,6 +13,10 @@
 // БЭМ-блоки
 @import "../blocks/modules";
 
+$w-std:1170px;
+$light-color:#ffffff;
+$accent_color:#65e496;
+
 body {
   font-family: "Roboto Slab", serif;
 }
@@ -22,10 +26,19 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.wrap{
+  max-width: $w-std;
+  margin: 0 auto;
+}
+
 .header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: $w-std;
+  margin: 0 auto;
+  padding-top: 38px;
   &__logo{
     display: block;
     background: url("../img/logo.svg");
@@ -33,12 +46,56 @@ body {
     height: 28px;
   }
   &-list{
+    font-family: "Open Sans", serif;
     display: flex;
-    justify-items: flex-end;
     list-style-type: none;
+    justify-items: flex-end;
     &__item{
-      margin-left: 15px;
+      margin-left: 22px;
+    }
+    &__link{
+      color: $light-color;
       font-size: 16px;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      transition: 0.3s;
+      padding-bottom: 2px;
+      &:hover{
+        border-bottom: 3px solid $accent_color;
+      }
+      &.active{
+        border-bottom: 3px solid $accent_color;
+      }
     }
   }
+}
+
+.block-book{
+  display: flex;
+  &-demo{
+    display: block;
+    width: 447px;
+    height: 643px;
+    background-image: url("../img/book.svg");
+    background-repeat:no-repeat;
+    flex-basis: 500px;
+  }
+}
+
+.block-text{
+  flex-basis: calc(100% - 500px);
+  &__name{
+    font-family: "Open Sans", serif;
+    font-size: 18px;
+  }
+    &__title{
+      font-size: 48px;
+      font-weight: 700;
+      span{
+        display: block;
+        color: $accent_color;
+        font-size: 18px;
+      }
+    }
 }
