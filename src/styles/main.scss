@@ -16,6 +16,7 @@
 $w-std:1170px;
 $light-color:#ffffff;
 $accent_color:#65e496;
+$dark_accent_color:#65e4b5;
 $black_color:#44444f;
 $darkblue_color:#696980;
 
@@ -100,15 +101,17 @@ body {
     font-weight: 400;
     letter-spacing: .75px;
     font-size: 18px;
-    margin-bottom: 31px;
-    margin-top:0;
+    margin: 0 0 31px 2px;
+    //margin-bottom: 31px;
+    //margin-left: 2px;
+    //margin-top:0;
   }
     &__title{
       color: $light-color;
       font-size: 48px;
       letter-spacing: 1.68px;
       font-weight: 700;
-      margin-bottom: 40px;
+      margin-bottom: 37px;
       span{
         display: block;
         color: $accent_color;
@@ -138,7 +141,7 @@ body {
     background-color: $accent_color;
     text-decoration: none;
     width: 250px;
-    height: 50px;
+    height: 48px;
     letter-spacing: .4px;
     margin-top: 45px;
 
@@ -157,8 +160,17 @@ body {
 .block-author{
   display: flex;
   justify-content: space-between;
-  padding-top: 181px;
-
+  padding-top: 161px;
+  & .block-text{
+    padding-top: 17px;
+    &__name{
+      margin-bottom: 18px;
+    }
+    &__btn{
+      width: 238px;
+      font-size: 18px;
+    }
+  }
 }
 
 .block-ava{
@@ -181,4 +193,25 @@ body {
 }
 .darkblue-text{
   color: $darkblue_color;
+}
+
+.block-counter{
+  display: flex;
+  justify-content: space-around;
+  margin: 161px 0;
+  p{
+    font-family: "Open Sans", serif;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.7px;
+    color: $darkblue_color;
+    span{
+      display: block;
+      font-size: 80px;
+      font-weight: 100;
+      color: $dark_accent_color;
+      font-family: "Roboto Slab", serif;
+      margin-bottom: 13px;
+    }
+  }
 }
