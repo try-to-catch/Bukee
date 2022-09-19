@@ -20,8 +20,16 @@ $dark_accent_color:#65e4b5;
 $black_color:#44444f;
 $darkblue_color:#696980;
 
+$bg-gray-page:#f5f6fa;
+$bg-dark-page:#44444f;
+
 body {
   font-family: "Roboto Slab", serif;
+}
+
+h3{
+  font-size: 24px;
+  letter-spacing: 1.3px;
 }
 
 .page-main {
@@ -198,7 +206,7 @@ body {
 .block-counter{
   display: flex;
   justify-content: space-around;
-  margin: 161px 0;
+  margin: 161px 0 145px;
   p{
     font-family: "Open Sans", serif;
     font-size: 18px;
@@ -212,6 +220,113 @@ body {
       color: $dark_accent_color;
       font-family: "Roboto Slab", serif;
       margin-bottom: 13px;
+    }
+  }
+}
+.page{
+  &_gray{
+    background-color: $bg-gray-page;
+    padding: 96px 0 255px;
+  }
+  &__title{
+    letter-spacing: 2px;
+    margin-top: 50px;
+    font-size: 48px;
+    text-align: center;
+    color: $black_color;
+  }
+  &__subtitle{
+    display: block;
+    color: $accent_color;
+    font-size: 18px;
+    letter-spacing: .95px;
+    margin: 10px 0 83px;
+    text-align: center;
+  }
+}
+.block-about{
+  display: flex;
+  justify-content: space-between;
+  &-text{
+    flex-basis: 40%;
+    &>p{
+      font-family: "Open Sans",serif;
+    }
+    &__text{
+      margin: 18px 0 0 0;
+      letter-spacing: 0.3px;
+      line-height: 150%;
+    }
+    &__list{
+      list-style-type: none;
+    }
+  }
+  &-social{
+    margin: 11px 0 0 2px;
+    &__title{
+      font-weight: 700;
+      display: inline-block;
+      font-size: 19px;
+      letter-spacing: 0.45px;
+    }
+    &__list{
+      list-style-type: none;
+      padding-left:21px;
+      display: inline;
+      &>li{
+        display: inline;
+        margin-right: 7px;
+      }
+      .fa-brands{
+        height: 18px;
+        width: 18px;
+        vertical-align: middle;
+        color: $accent_color;
+      }
+    }
+  }
+  &-table{
+    flex-basis: 48.82%;
+    &__list{
+      margin:23px 0 0 ;
+      padding: 0;
+      column-count: 2;
+      column-gap: 26px;
+      list-style-type: none;
+      counter-reset: list;
+      &>li{
+        position: relative;
+        font-size: 15px;
+        padding-left: 37px;
+        font-family: "Open Sans", serif;
+        counter-increment: list;
+        margin-bottom: 9px;
+        line-height: 23px;
+        letter-spacing: 0.7px;
+        &:before{
+          content: counter(list) ". ";
+        }
+        &:after{
+          content: "+";
+          background-color: #5fc9ba;
+          padding: 0 7px;
+          position: absolute;
+          left: 0;
+          color: $light-color;
+        }
+      }
+    }
+    &__btn{
+      display: block;
+      text-align: center;
+      border-style: none;
+      border-radius: 5%;
+      height: 50px;
+      width: 135px;
+      background: $dark_accent_color;
+      color: $light-color;
+      letter-spacing: 1.5px;
+      margin-top: 26px;
     }
   }
 }
