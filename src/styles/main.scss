@@ -98,6 +98,35 @@ h3{
     background-image: url("../img/book.svg");
     background-repeat:no-repeat;
     border-radius: 10px;
+    position: relative;
+    &__title{
+      display: block;
+      left: 128px;
+      top: 109px;
+      position: absolute;
+      color: $light-color;
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: 1.1px;
+    }
+    &__subtitle{
+      font-family: "Open Sans", serif;
+      display: block;
+      color: $accent_color;
+      font-size: 14px;
+      font-weight: 100;
+      letter-spacing: 0.95px;
+      margin-top: 5px;
+    }
+    &__name{
+      position: absolute;
+      font-family: "Open Sans", serif;
+      color: $accent_color;
+      font-size: 14px;
+      bottom: 47px;
+      left: 86px;
+      letter-spacing: 0.85px;
+    }
   }
 }
 
@@ -168,7 +197,7 @@ h3{
 .block-author{
   display: flex;
   justify-content: space-between;
-  padding-top: 161px;
+  padding-top: 65px;
   & .block-text{
     padding-top: 17px;
     &__name{
@@ -224,9 +253,11 @@ h3{
   }
 }
 .page{
+  padding-top: 96px;
   &_gray{
+    padding-bottom: 255px;
+    //padding: 96px 0 255px;
     background-color: $bg-gray-page;
-    padding: 96px 0 255px;
   }
   &__title{
     letter-spacing: 2px;
@@ -249,18 +280,15 @@ h3{
   justify-content: space-between;
   &-text{
     flex-basis: 40%;
-    &>p{
-      font-family: "Open Sans",serif;
-    }
     &__text{
+      font-family: "Open Sans",serif;
+      color: $darkblue_color;
       margin: 18px 0 0 0;
       letter-spacing: 0.3px;
       line-height: 150%;
     }
-    &__list{
-      list-style-type: none;
-    }
   }
+
   &-social{
     margin: 11px 0 0 2px;
     &__title{
@@ -327,6 +355,80 @@ h3{
       color: $light-color;
       letter-spacing: 1.5px;
       margin-top: 26px;
+    }
+  }
+}
+
+.other{
+  &__row{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 87px;
+  }
+  &__column{
+    flex-basis: 325px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  &-book{
+    width: 269px;
+    height: 409px;
+    background-image: url("../img/book.svg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    position: relative;
+    border-radius: 4px;
+    &-description{
+      text-align: center;
+      &__title{
+        color: $black_color;
+        font-size: 24px;
+        margin-top: 34px;
+        letter-spacing: 1px;
+      }
+      &__text{
+        font-size: 15px;
+        color: $darkblue_color;
+        letter-spacing: 0.75px;
+        line-height: 22.5px;
+      }
+      &__link{
+        font-size: 15px;
+        text-decoration-line: none;
+        color: $accent_color;
+        font-weight: 600;
+      }
+
+    }
+    &__title{
+      color: $light-color;
+      font-size: 24px;
+      text-transform: uppercase;
+      position: absolute;
+      left: 77px;
+      top: 69px;
+      letter-spacing: 1px;
+    }
+    &__subtitle{
+      display: block;
+      color: $accent_color;
+      font-size: 12px;
+      font-family: "Open Sans", serif;
+      text-transform: none;
+      font-weight: 100;
+      margin: 9px 0 0 -6px;
+      letter-spacing: 0.75px
+
+    }
+    &__name{
+      color: $accent_color;
+      font-size: 12px;
+      font-family: "Open Sans", serif;
+      position: absolute;
+      bottom: 22px;
+      left: 82px;
+      letter-spacing: 0.6px;
     }
   }
 }
